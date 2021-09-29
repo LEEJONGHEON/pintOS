@@ -37,9 +37,17 @@ unlock()
 
 # Problem 2 물만들기문제
 H2 +  O -> Water 되는데
-H2개이상있어야지 O와 반응함
+h2와 o가 만나서 water을 만들도록 Thread을 활용
 
-#
+# reaction_h
+h 생성하는과정 h하나를생성
+만약 h가 2개이상이면 o를 생성하여 물을 제작가능하므로 o에 signal을 보내 water 제작을준비함
+h가 2개이하면 h가 더생산이필요하므로 o에게서 h제작 signal을 wait함
+
+# reaction_o
+o 를 생성하는과정 o를 하나생성
+만약 h가 2개이상인경우 water 을 생산한뒤 h를 생산하는 signal을 두번보냄(다음번 물생산을위해)
+h가 2개이하인경우 h로 h 필요하다는 signal을보냄
 
 
 
