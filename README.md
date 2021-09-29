@@ -18,7 +18,7 @@ lock()
 pthread_cond_signal(&cond) // &cond신호를 기다리는 Thread를 깨움
 unlock()
 
-# station_load_train
+### station_load_train
 기차가 역을 도착하여 승객을 이 전부탑승할때까지 기다리는 Thread
 남은좌석이없을 경우 출발하고 그전까지 Thread 대기상태
 
