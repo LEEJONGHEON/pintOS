@@ -1,5 +1,6 @@
 # pintOS
-Problem 1 기차문제(Thread을 이용한 동기화문제)
+
+## Problem 1 기차문제(Thread을 이용한 동기화문제)
 Thread 를 생성하며 Mutex 방식으로 lock을 사용하여 critical section을 관리함
 Mutex 조건문을 이용하여 thread lock과 unlock을 시킴
 pthread_cond_signal(&cond) : signal을 통해 &cond 를 기다리는 pthread_cond_wait을  깨우는 역활을함. 
@@ -32,4 +33,13 @@ unlock()
 기차에 승객이 앉는 Thread
 좌석수 감소, 탑승수 감소
 만약 기차에 좌석이 0 이거나 탑승하는 승객이 0 일경우 새로운 기차를 호출함 cond_signal로  cond_leave 기차 출발신호를 보냄
+
+
+# Problem 2 물만들기문제
+H2 +  O -> Water 되는데
+H2개이상있어야지 O와 반응함
+
+#
+
+
 
